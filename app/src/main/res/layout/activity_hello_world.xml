@@ -9,59 +9,70 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="tech.ankush.helloworldandroid.HelloWorldActivity">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:text="Ankush Chauhan"
-        android:ems="10"
-        android:id="@+id/editText"
-        android:enabled="true"
-        android:editable="true"
-        android:layout_below="@+id/textView0"
-        android:layout_alignParentStart="true"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentEnd="true"
-        android:focusableInTouchMode="false"
-        android:gravity="top"
-        android:focusable="true"
-        android:autoText="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:id="@+id/helloButton"
-        android:layout_marginTop="60dp"
-        android:enabled="true"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:nestedScrollingEnabled="false"
-        android:onClick="sayHello" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Goodbye"
-        android:id="@+id/goodbyeButton"
-        android:layout_marginBottom="78dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/helloButton"
-        android:onClick="sayGoodbye" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Please enter your name:"
-        android:id="@+id/textView0"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:orientation="vertical"
+        android:weightSum="1">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/printMsg"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="46dp"
+            android:autoText="false"
+            android:contextClickable="true"
+            android:editable="true"
+            android:ems="10"
+            android:enabled="true"
+            android:focusable="true"
+            android:focusableInTouchMode="false"
+            android:gravity="top"
+            android:hint="Enter your Name"
+            android:inputType="textPersonName"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/helloButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText"
+            android:layout_marginTop="61dp"
+            android:enabled="true"
+            android:nestedScrollingEnabled="false"
+            android:onClick="sayHello"
+            android:text="Hello" />
+
+        <TextView
+            android:id="@+id/printHello"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.28"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/goodbyeButton"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/helloButton"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/helloButton"
+            android:layout_marginTop="113dp"
+            android:onClick="sayGoodbye"
+            android:text="Goodbye" />
+
+        <TextView
+            android:id="@+id/printBye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.28"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
+
 </RelativeLayout>
